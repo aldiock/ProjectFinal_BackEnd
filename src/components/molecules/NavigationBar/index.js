@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           E-Sensus Kolom 2
         </a>
         <button
@@ -24,9 +24,6 @@ const NavBar = () => {
             <div className="navbar-nav">
               <Link className="nav-link" to="/">
                 Dashboard
-              </Link>
-              <Link className="nav-link" to="/login">
-                Login Page
               </Link>
               <Link className="nav-link" to="/datajiwaanggotakolom">
                 Data Jiwa Anggota Kolom

@@ -3,14 +3,19 @@ import NavBar from "../../molecules/NavigationBar";
 
 const Dashboard = () => {
   return (
-    <div class="container-sm">
-      <NavBar />
-      <h3 class="text-center">
-          <br/>
-        E-Sensus Jemaat Kolom 2 GMIM Genesaret Pateten
-      </h3>
-      <div class="d-flex justify-content-center">Selamat Datang, ini adalah web application yang digunakan untuk sensus anggota jemaat khususnya kolom 2.</div>
-    </div>
+    <>
+      <div>
+        <NavBar />
+      </div>
+      <div class="container-sm">
+        <h4 class="text-center">
+          <br />
+          E-SENSUS JEMAAT KOLOM 2
+        </h4>
+        <h5 className="text-center">GMIM "GENESARET PATETEN"</h5>
+        <h6 className="text-center">WILAYAH BITUNG XII</h6>
+      </div>
+    </>
   );
 };
 
