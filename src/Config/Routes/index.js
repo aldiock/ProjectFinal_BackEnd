@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "../components/pages/Login";
-import Dashboard from "../components/pages/Dashboard";
-import DataJiwaAnggotaKolom from "../components/pages/DataJiwaAnggotaKolom";
+import Login from "../../components/pages/Login";
+import Dashboard from "../../components/pages/Dashboard";
+import DataJiwaAnggotaKolom from "../../components/pages/DataJiwaAnggotaKolom";
+import AddDataAnggota from "../../components/pages/AddDataAnggota";
 
 const Routes = () => {
   return (
@@ -16,6 +17,9 @@ const Routes = () => {
         </Route>
         <Route exact path="/datajiwaanggotakolom">
           <DataJiwaAnggotaKolom />
+        </Route>
+        <Route exact path="/adddataanggota">
+          <AddDataAnggota/>
         </Route>
       </Switch>
     </Router>

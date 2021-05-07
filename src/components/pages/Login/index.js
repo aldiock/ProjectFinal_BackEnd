@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CustomButton from "../../atom/Button";
 import InputText from "../../atom/InputText";
 import NavBar from "../../molecules/NavigationBar";
-import { useHistory } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  let history = useHistory();
 
   const handleSubmit = () => {
     const data = {

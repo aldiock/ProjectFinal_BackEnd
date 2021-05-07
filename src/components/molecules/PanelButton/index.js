@@ -1,5 +1,4 @@
 import React from "react";
-import CustomButton from "../../atom/Button";
 
 const PanelButton = () => {
   return (
@@ -7,19 +6,26 @@ const PanelButton = () => {
       <div className="panel-body">
         <div className="row">
           <div className="col-md-2">
-            <CustomButton labelButton="Add Data" className="btn btn-primary" />
+            <a
+              href="/adddataanggota"
+              class="btn btn-primary "
+              tabindex="-1"
+              role="button"
+              aria-disabled="true"
+            >
+              Add Anggota
+            </a>
           </div>
           <div className="col-md-2">
-            <CustomButton labelButton="View Data" className="btn btn-primary" />
-          </div>
-          <div className="col-md-2">
-            <CustomButton labelButton="Edit Data" className="btn btn-success" />
-          </div>
-          <div className="col-md-2">
-            <CustomButton
-              labelButton="Delete Data"
-              className="btn btn-danger"
-            />
+            <a
+              href="/datajiwaanggotakolom"
+              class="btn btn-success "
+              tabindex="-1"
+              role="button"
+              aria-disabled="true"
+            >
+              View Data Anggota
+            </a>
           </div>
         </div>
         <hr />
