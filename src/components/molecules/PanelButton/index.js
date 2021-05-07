@@ -19,12 +19,23 @@ const PanelButton = () => {
           <div className="col-md-2">
             <a
               href="/datajiwaanggotakolom"
-              class="btn btn-success "
+              class="btn btn-secondary"
               tabindex="-1"
               role="button"
               aria-disabled="true"
             >
               View Data Anggota
+            </a>
+          </div>
+          <div className="col-md-2">
+            <a
+              href="/updatedataanggota"
+              class="btn btn-success "
+              tabindex="-1"
+              role="button"
+              aria-disabled="true"
+            >
+              Edit Data Anggota
             </a>
           </div>
         </div>

@@ -4,6 +4,7 @@ import Login from "../../components/pages/Login";
 import Dashboard from "../../components/pages/Dashboard";
 import DataJiwaAnggotaKolom from "../../components/pages/DataJiwaAnggotaKolom";
 import AddDataAnggota from "../../components/pages/AddDataAnggota";
+import UpdateDataAnggota from "../../components/pages/UpdateDataAnggota";
 
 const Routes = () => {
   return (
@@ -19,7 +20,10 @@ const Routes = () => {
           <DataJiwaAnggotaKolom />
         </Route>
         <Route exact path="/adddataanggota">
-          <AddDataAnggota/>
+          <AddDataAnggota />
+        </Route>
+        <Route exact path="/updatedataanggota">
+          <UpdateDataAnggota />
         </Route>
       </Switch>
     </Router>

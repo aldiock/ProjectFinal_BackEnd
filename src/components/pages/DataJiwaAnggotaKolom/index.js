@@ -32,7 +32,7 @@ const DataJiwaAnggotaKolom = () => {
       <div>
         <NavBar />
       </div>
-      <br/>
+      <br />
       <div className="container-sm">
         <h3 className="text-center">Data Jiwa Anggota Kolom</h3>
         <hr />
@@ -40,27 +40,27 @@ const DataJiwaAnggotaKolom = () => {
         <table class="table table-striped table-hover">
           <thead>
             <tr>
-              <th>NIK</th>
-              <th>Nama Anggota Kolom</th>
-              <th>L/P</th>
-              <th>Tempat Lahir</th>
-              <th>Tanggal Lahir</th>
-              <th>Pendidikan</th>
-              <th>Pekerjaan</th>
-              <th>Status Kawin</th>
+              <th className="text-center">NIK</th>
+              <th className="text-center">Nama Anggota Kolom</th>
+              <th className="text-center">L/P</th>
+              <th className="text-center">Tempat Lahir</th>
+              <th className="text-center">Tanggal Lahir</th>
+              <th className="text-center">Pendidikan</th>
+              <th className="text-center">Pekerjaan</th>
+              <th className="text-center">Status Kawin</th>
             </tr>
           </thead>
           <tbody>
             {anggota.map((item) => (
               <tr key={item.id}>
-                <td>{item.nik}</td>
-                <td>{item.namaJemaat}</td>
-                <td>{item.jenisKelamin}</td>
-                <td>{item.tempatLahir}</td>
-                <td>{item.tanggalLahir}</td>
-                <td>{item.pendidikan}</td>
-                <td>{item.pekerjaan}</td>
-                <td>{item.statusKawin}</td>
+                <td className="text-center">{item.nik}</td>
+                <td className="text-center">{item.namaJemaat}</td>
+                <td className="text-center">{item.jenisKelamin}</td>
+                <td className="text-center">{item.tempatLahir}</td>
+                <td className="text-center">{item.tanggalLahir}</td>
+                <td className="text-center">{item.pendidikan}</td>
+                <td className="text-center">{item.pekerjaan}</td>
+                <td className="text-center">{item.statusKawin}</td>
               </tr>
             ))}
           </tbody>
