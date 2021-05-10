@@ -34,10 +34,13 @@ const AddDataAnggota = () => {
       <div>
         <NavBar />
       </div>
+      <br/>
       <div className="container-sm">
         <h3 className="text-center">Data Jiwa Anggota Kolom</h3>
         <hr />
+        <div className="text-center">
         <PanelButton />
+        </div>
         <div class="container-md">
           <h5 class="text-left">Input Data</h5>
           <div>

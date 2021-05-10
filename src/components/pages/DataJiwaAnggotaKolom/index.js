@@ -36,7 +36,9 @@ const DataJiwaAnggotaKolom = () => {
       <div className="container-sm">
         <h3 className="text-center">Data Jiwa Anggota Kolom</h3>
         <hr />
-        <PanelButton />
+        <div className="text-center">
+          <PanelButton />
+        </div>
         <table class="table table-striped table-hover">
           <thead>
             <tr>

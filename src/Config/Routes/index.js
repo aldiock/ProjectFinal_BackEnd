@@ -5,6 +5,8 @@ import Dashboard from "../../components/pages/Dashboard";
 import DataJiwaAnggotaKolom from "../../components/pages/DataJiwaAnggotaKolom";
 import AddDataAnggota from "../../components/pages/AddDataAnggota";
 import UpdateDataAnggota from "../../components/pages/UpdateDataAnggota";
+import SignUp from "../../components/pages/SignUp";
+import PelsusPage from "../../components/pages/PelsusPage";
 
 const Routes = () => {
   return (
@@ -24,6 +26,12 @@ const Routes = () => {
         </Route>
         <Route exact path="/updatedataanggota">
           <UpdateDataAnggota />
+        </Route>
+        <Route exact path="/pelsuspage">
+          <PelsusPage />
+        </Route>
+        <Route exact path="/signup">
+          <SignUp/>
         </Route>
       </Switch>
     </Router>

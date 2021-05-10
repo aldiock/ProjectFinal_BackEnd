@@ -1,19 +1,35 @@
 import React from "react";
-import NavBar from "../../molecules/NavigationBar";
+import { useHistory } from "react-router";
+import CustomButton from "../../atom/Button";
+import PanelButtonDashboard from "../../molecules/PanelButtonDashboard";
 
 const Dashboard = () => {
+  let history = useHistory();
+  const handleSubmit = () => {
+    history.push("/signup");
+  };
+
   return (
     <>
-      <div>
-        <NavBar />
-      </div>
       <div class="container-sm">
         <h4 class="text-center">
           <br />
-          E-SENSUS JEMAAT KOLOM 2
+          <br />
+          SELAMAT DATANG DI E-SENSUS JEMAAT KOLOM 2
         </h4>
         <h5 className="text-center">GMIM "GENESARET PATETEN"</h5>
         <h6 className="text-center">WILAYAH BITUNG XII</h6>
+        <hr />
+        {/* <div className="col-md-2">
+          <CustomButton
+            className="btn btn-primary"
+            labelButton="Daftar sebagai Pelsus"
+            onClick={handleSubmit}
+          />
+        </div> */}
+        <div className="container-sm">
+          <PanelButtonDashboard />
+        </div>
       </div>
     </>
   );

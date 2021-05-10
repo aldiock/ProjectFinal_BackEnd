@@ -15,7 +15,7 @@ const UpdateDataAnggota = () => {
   const [pendidikan, setPendidikan] = useState("");
   const [statusKawin, setStatusKawin] = useState("");
 
-  const [selectedProduct, setSelectedProduct] = useState({});
+  const [selectedJemaat, setSelectedJemaat] = useState({});
   const [anggota, setAnggota] = useState([]);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const UpdateDataAnggota = () => {
       pendidikan: pendidikan,
       statusKawin: statusKawin,
     };
-    firebase.database().ref(`jemaat/${selectedProduct.id}`).set(data);
+    firebase.database().ref(`jemaat/${selectedJemaat.id}`).set(data);
   };
 
   const onUpdateData = (item) => {
@@ -62,7 +62,7 @@ const UpdateDataAnggota = () => {
     setPekerjaan(item.pekerjaan);
     setStatusKawin(item.statusKawin);
     setJenisKelamin(item.jenisKelamin);
-    setSelectedProduct(item);
+    setSelectedJemaat(item);
   };
 
   const onDeleteData = (item) => {
@@ -74,10 +74,13 @@ const UpdateDataAnggota = () => {
       <div>
         <NavBar />
       </div>
+      <br />
       <div className="container-sm">
         <h3 className="text-center">Data Jiwa Anggota Kolom</h3>
         <hr />
-        <PanelButton />
+        <div className="text-center">
+          <PanelButton />
+        </div>
         <div class="container-md">
           <h5 class="text-left">Input Data</h5>
           <div>
@@ -186,7 +189,7 @@ const UpdateDataAnggota = () => {
           className="btn btn-success"
           onClick={onSubmit}
         />
-        <hr/>
+        <hr />
         <table class="table table-striped table-hover">
           <thead>
             <tr>
