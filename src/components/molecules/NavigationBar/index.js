@@ -28,6 +28,9 @@ const NavBar = () => {
               <Link className="nav-link" to="/datajiwaanggotakolom">
                 Data Jiwa Anggota Kolom
               </Link>
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
               <Link className="nav-link" to="/">
                 Log Out
               </Link>

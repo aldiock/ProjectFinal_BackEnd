@@ -25,6 +25,9 @@ const NavBarJemaat = () => {
               <Link className="nav-link" to="/">
                 Dashboard
               </Link>
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
             </div>
           </div>
         </div>
