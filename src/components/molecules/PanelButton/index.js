@@ -16,7 +16,7 @@ const PanelButton = () => {
               Add Anggota
             </a>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-7">
             <a
               href="/datajiwaanggotakolom"
               class="btn btn-secondary"
@@ -27,7 +27,7 @@ const PanelButton = () => {
               View Data Anggota
             </a>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-3">
             <a
               href="/updatedataanggota"
               class="btn btn-success "

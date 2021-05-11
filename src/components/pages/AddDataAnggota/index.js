@@ -62,7 +62,7 @@ const AddDataAnggota = () => {
               <td>
                 <InputText
                   class="form-control"
-                  placeholder="Masukkan Nama Jemaat"
+                  placeholder="Masukkan Nama Anggota Jemaat"
                   value={namaJemaat}
                   onChange={(event) => setNamaJemaat(event.target.value)}
                 />
@@ -145,8 +145,8 @@ const AddDataAnggota = () => {
           </div>
         </div>
         <CustomButton
-          labelButton="Simpan"
-          className="btn btn-secondary"
+          labelButton="Simpan Data"
+          className="btn btn-success"
           onClick={handleSubmit}
         />
       </div>

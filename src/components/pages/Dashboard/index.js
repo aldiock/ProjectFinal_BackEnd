@@ -3,11 +3,9 @@ import { useHistory } from "react-router";
 import CustomButton from "../../atom/Button";
 import PanelButtonDashboard from "../../molecules/PanelButtonDashboard";
 
+
 const Dashboard = () => {
-  let history = useHistory();
-  const handleSubmit = () => {
-    history.push("/signup");
-  };
+ 
 
   return (
     <>
@@ -15,10 +13,13 @@ const Dashboard = () => {
         <h4 class="text-center">
           <br />
           <br />
+          <br />
+          <br />
           SELAMAT DATANG DI E-SENSUS JEMAAT KOLOM 2
         </h4>
         <h5 className="text-center">GMIM "GENESARET PATETEN"</h5>
         <h6 className="text-center">WILAYAH BITUNG XII</h6>
+        <br />
         <hr />
         {/* <div className="col-md-2">
           <CustomButton

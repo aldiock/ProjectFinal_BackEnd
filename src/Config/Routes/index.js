@@ -7,6 +7,7 @@ import AddDataAnggota from "../../components/pages/AddDataAnggota";
 import UpdateDataAnggota from "../../components/pages/UpdateDataAnggota";
 import SignUp from "../../components/pages/SignUp";
 import PelsusPage from "../../components/pages/PelsusPage";
+import Jemaat from "../../components/pages/Jemaat";
 
 const Routes = () => {
   return (
@@ -32,6 +33,9 @@ const Routes = () => {
         </Route>
         <Route exact path="/signup">
           <SignUp/>
+        </Route>
+        <Route exact path="/jemaat">
+          <Jemaat/>
         </Route>
       </Switch>
     </Router>

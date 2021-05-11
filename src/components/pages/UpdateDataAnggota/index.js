@@ -185,7 +185,7 @@ const UpdateDataAnggota = () => {
           </div>
         </div>
         <CustomButton
-          labelButton="Submit Data"
+          labelButton="Simpan Data"
           className="btn btn-success"
           onClick={onSubmit}
         />
