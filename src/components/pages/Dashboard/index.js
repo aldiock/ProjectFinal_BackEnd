@@ -1,12 +1,8 @@
 import React from "react";
-import { useHistory } from "react-router";
-import CustomButton from "../../atom/Button";
 import PanelButtonDashboard from "../../molecules/PanelButtonDashboard";
-
+import bg from "../../atom/bg/bg.jpg";
 
 const Dashboard = () => {
- 
-
   return (
     <>
       <div class="container-sm">

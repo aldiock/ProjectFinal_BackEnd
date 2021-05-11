@@ -5,6 +5,7 @@ import firebase from "../../../Config/firebase";
 
 const DataJiwaAnggotaKolom = () => {
   const [anggota, setAnggota] = useState([]);
+  const [searchNama, setSearchNama] = useState("");
 
   useEffect(() => {
     firebase
@@ -35,6 +36,14 @@ const DataJiwaAnggotaKolom = () => {
       <br />
       <div className="container-sm">
         <h3 className="text-center">Data Jiwa Anggota Kolom</h3>
+        <input
+          type="text"
+          placeholder="Search nama anggota jemaat..."
+          className="form-control"
+          onChange={(e) => {
+            setSearchNama(e.target.value);
+          }}
+        />
         <hr />
         <div className="text-center">
           <PanelButton />
@@ -53,18 +62,30 @@ const DataJiwaAnggotaKolom = () => {
             </tr>
           </thead>
           <tbody>
-            {anggota.map((item) => (
-              <tr key={item.id}>
-                <td className="text-center">{item.nik}</td>
-                <td className="text-center">{item.namaJemaat}</td>
-                <td className="text-center">{item.jenisKelamin}</td>
-                <td className="text-center">{item.tempatLahir}</td>
-                <td className="text-center">{item.tanggalLahir}</td>
-                <td className="text-center">{item.pendidikan}</td>
-                <td className="text-center">{item.pekerjaan}</td>
-                <td className="text-center">{item.statusKawin}</td>
-              </tr>
-            ))}
+            {anggota
+              .filter((val) => {
+                if (searchNama === "") {
+                  return val;
+                } else if (
+                  val.namaJemaat
+                    .toLowerCase()
+                    .includes(searchNama.toLowerCase())
+                ) {
+                  return val;
+                }
+              })
+              .map((item) => (
+                <tr key={item.id}>
+                  <td className="text-center">{item.nik}</td>
+                  <td className="text-center">{item.namaJemaat}</td>
+                  <td className="text-center">{item.jenisKelamin}</td>
+                  <td className="text-center">{item.tempatLahir}</td>
+                  <td className="text-center">{item.tanggalLahir}</td>
+                  <td className="text-center">{item.pendidikan}</td>
+                  <td className="text-center">{item.pekerjaan}</td>
+                  <td className="text-center">{item.statusKawin}</td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>

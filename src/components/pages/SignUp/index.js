@@ -10,6 +10,12 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [namePelsus, setNamePelsus] = useState("");
 
+  const resetInput = () => {
+    setEmail("");
+    setPassword("");
+    setNamePelsus("");
+  }
+
   const handleSubmit = () => {
     const data = {
       email: email,
@@ -32,6 +38,7 @@ const SignUp = () => {
       .catch((err) => {
         console.log(err);
       });
+      resetInput();
   };
 
   let history = useHistory();

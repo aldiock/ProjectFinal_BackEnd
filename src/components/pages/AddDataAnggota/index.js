@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 import firebase from "../../../Config/firebase";
 import CustomButton from "../../atom/Button";
 import { default as InputText } from "../../atom/InputText";
@@ -15,6 +16,8 @@ const AddDataAnggota = () => {
   const [pendidikan, setPendidikan] = useState("");
   const [statusKawin, setStatusKawin] = useState("");
 
+  let history = useHistory();
+
   const handleSubmit = () => {
     const data = {
       nik: nik,
@@ -26,7 +29,11 @@ const AddDataAnggota = () => {
       pendidikan: pendidikan,
       statusKawin: statusKawin,
     };
-    firebase.database().ref("jemaat").push(data);
+    firebase
+      .database()
+      .ref("jemaat")
+      .push(data)
+      .then((res) => history.push("/datajiwaanggotakolom"));
   };
 
   return (
@@ -34,12 +41,12 @@ const AddDataAnggota = () => {
       <div>
         <NavBar />
       </div>
-      <br/>
+      <br />
       <div className="container-sm">
         <h3 className="text-center">Data Jiwa Anggota Kolom</h3>
         <hr />
         <div className="text-center">
-        <PanelButton />
+          <PanelButton />
         </div>
         <div class="container-md">
           <h5 class="text-left">Input Data</h5>

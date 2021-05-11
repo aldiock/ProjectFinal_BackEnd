@@ -36,7 +36,6 @@ const UpdateDataAnggota = () => {
           setAnggota(anggotaArr);
         }
       });
-    console.log(anggota);
   }, []);
 
   const onSubmit = () => {
@@ -102,7 +101,7 @@ const UpdateDataAnggota = () => {
               <td>
                 <InputText
                   class="form-control"
-                  placeholder="Masukkan Nama Jemaat"
+                  placeholder="Masukkan Nama Anggota Jemaat"
                   value={namaJemaat}
                   onChange={(event) => setNamaJemaat(event.target.value)}
                 />
